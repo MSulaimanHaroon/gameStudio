@@ -9,7 +9,7 @@ export default function Games() {
 
 
   return (
-    <section id="product" className="game-main"
+    <section id='products' className="game-main"
        ref={ref}>     
         <Heading heading="Our Products" textColor="white" lineColor="white"/>
       <div

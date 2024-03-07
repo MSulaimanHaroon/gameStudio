@@ -10,6 +10,9 @@ function Navbar() {
         setOpen(!open);
     };
 
+    const closeMenu = () => {
+        setOpen(false);
+    };
     const item = {
         exit: {
             opacity: 0,
@@ -68,6 +71,7 @@ function Navbar() {
                                 initial={{ y: 80, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: .8 }}
+                                onClick={closeMenu}
                                 exit={{
                                     opacity: 0,
                                     y: 90,
@@ -80,6 +84,7 @@ function Navbar() {
                             <motion.a href="#tech"
                                 initial={{ y: 80, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
+                                onClick={closeMenu}
                                 transition={{ delay: .7 }}
                                 exit={{
                                     opacity: 0,
@@ -93,6 +98,7 @@ function Navbar() {
                             <motion.a href="#products"
                                 initial={{ y: 80, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
+                                onClick={closeMenu}
                                 transition={{ delay: .6 }}
                                 exit={{
                                     opacity: 0,
@@ -102,10 +108,11 @@ function Navbar() {
                                         delay: .6
                                     }
                                 }}
-                            >Portfolio</motion.a>
+                            >Products</motion.a>
                             <motion.a href="#blog"
                                 initial={{ y: 80, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
+                                onClick={closeMenu}
                                 transition={{ delay: .5 }}
                                 exit={{
                                     opacity: 0,
@@ -119,6 +126,7 @@ function Navbar() {
                             <motion.a href="#contact"
                                 initial={{ y: 80, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
+                                onClick={closeMenu}
                                 transition={{ delay: .4 }}
                                 exit={{
                                     opacity: 0,
