@@ -1,0 +1,55 @@
+.heading-main{
+    display: flex;
+    /* color: white; */
+    transition: 0.5s ease-in-out;
+    font-size: 40px;
+    cursor: default;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.line{
+    border: 2px solid rgb(255, 255, 255);
+    width: 10rem;
+    transition: width 2s;
+    
+}
+
+.game-main:hover .line{
+    width: 20rem;
+}
+.blog-main:hover .line{
+    width: 20rem;
+}
+.void:hover .line{
+    width: 20rem;
+}
+@media only screen and (max-width: 900px) {
+    .heading-main {
+      font-size: 17px;
+    }
+    .game-main:hover .line{
+        width: 10rem;
+    }
+    .blog-main:hover .line{
+        width: 10em;
+    }
+    .void:hover .line{
+        width: 10rem;
+    }
+    .line{
+        border: 2px solid rgb(255, 255, 255);
+        width: 8rem;
+        transition: width 2s;
+        
+    }
+  
+  }
+  
+  @media only screen and (max-width: 200px) {
+    .heading-main {
+        font-size: 14px;
+      }
+    
+  }

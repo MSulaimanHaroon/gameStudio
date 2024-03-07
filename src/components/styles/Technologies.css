@@ -1,0 +1,350 @@
+:root {
+	--rotate-speed: 40;
+	--count: 10;
+	/* Default count, the DOM element should override this */
+	--easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+	--easing: cubic-bezier(0.000, 0.37, 1.000, 0.63);
+	overflow-x:hidden ;
+}
+.tools {
+    position: relative;
+    width: 100%;
+}
+
+.tools::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(42deg, rgb(142 0 0) 0%, rgb(207, 46, 46) 100%); /* Adjust the opacity as needed */
+    z-index: -1;
+    /* border-top-left-radius: 89px;
+    border-bottom-left-radius: 89px; */
+}
+
+/* Your existing styles */
+.tools {
+    background: whitesmoke;
+    border-top-left-radius: 89px;
+    border-bottom-left-radius: 89px;
+}
+
+
+ .model-img{
+	max-width: 50px;
+    max-height: 50px;
+	width: 100%;
+	height: 100%;
+ }
+
+.void {
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+	position: relative;
+	aspect-ratio: 1 / 1;
+}
+
+/* ul:hover * {
+	-webkit-animation-play-state: paused;
+	        animation-play-state: paused;
+} */
+#card-list{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	outline: 2px dotted magenta;
+	z-index: 1;
+}
+
+.list {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	/* 	outline: 2px dashed cyan; */
+	width: 88%;
+	-webkit-animation: rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+	animation: rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+}
+
+.card {
+	width: 15%;
+	padding: 24px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 8px;
+	background:linear-gradient(135deg, rgb(142 0 0) 0%, rgb(207, 46, 46) 100%);
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.1);
+	border-radius: 100px;
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #625550;
+	-webkit-animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+	animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+	transition: 0.5s;
+}
+.card:hover{
+	background: linear-gradient(135deg, rgb(150, 27, 2) 0%, rgb(207, 78, 46) 100%);
+	width: 150px;
+	height: 150px;
+	line-height: 34px;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+.model-name {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	color: #ffffff;
+	display: block;
+}
+
+.list:nth-child(2),
+.list:nth-child(2) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -1s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -1s);
+}
+
+.list:nth-child(3),
+.list:nth-child(3) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -2s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -2s);
+}
+
+.list:nth-child(4),
+.list:nth-child(4) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -3s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -3s);
+}
+
+.list:nth-child(5),
+.list:nth-child(5) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -4s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -4s);
+}
+
+.list:nth-child(6),
+.list:nth-child(6) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -5s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -5s);
+}
+
+.list:nth-child(7),
+.list:nth-child(7) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -6s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -6s);
+}
+
+.list:nth-child(8),
+.list:nth-child(8) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -7s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -7s);
+}
+
+.list:nth-child(9),
+.list:nth-child(9) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -8s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -8s);
+}
+.list:nth-child(10),
+.list:nth-child(10) .card {
+	-webkit-animation-delay: calc((var(--rotate-speed)/var(--count)) * -9s);
+	animation-delay: calc((var(--rotate-speed)/var(--count)) * -9s);
+}
+@-webkit-keyframes rotateCW {
+	from {
+		transform: translate3d(0px, -50%, -1px) rotate(-45deg);
+	}
+
+	to {
+		transform: translate3d(0px, -50%, 0px) rotate(-315deg);
+	}
+}
+
+@keyframes rotateCW {
+	from {
+		transform: translate3d(0px, -50%, -1px) rotate(-45deg);
+	}
+
+	to {
+		transform: translate3d(0px, -50%, 0px) rotate(-315deg);
+	}
+}
+
+@-webkit-keyframes rotateCCW {
+	from {
+		transform: rotate(45deg);
+	}
+
+	to {
+		transform: rotate(315deg);
+	}
+}
+
+@keyframes rotateCCW {
+	from {
+		transform: rotate(45deg);
+	}
+
+	to {
+		transform: rotate(315deg);
+	}
+}
+
+@-webkit-keyframes pulseGlow {
+	from {
+		background-size: 60%;
+	}
+
+	to {
+		background-size: 100%;
+	}
+}
+
+@keyframes pulseGlow {
+	from {
+		background-size: 60%;
+	}
+
+	to {
+		background-size: 100%;
+	}
+}
+
+.center-circle {
+	position: absolute;
+	width: 15%;
+	aspect-ratio: 1 / 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	box-shadow: 0px 18px 36px -18px rgba(12, 5, 46, 0.3), 0px 30px 60px -12px rgba(12, 5, 46, 0.25);
+	border-radius: 50%;
+}
+
+.second-circle {
+	position: absolute;
+	width: 40%;
+	aspect-ratio: 1 / 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #F5F4FE;
+	opacity: 0.5;
+	box-shadow: 0px 18px 36px -18px rgba(12, 5, 46, 0.3), 0px 30px 60px -12px rgba(12, 5, 46, 0.25);
+	border-radius: 50%;
+}
+
+.last-circle {
+	position: absolute;
+	width: 66%;
+	aspect-ratio: 1 / 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #F5F4FE;
+	opacity: 0.25;
+	box-shadow: 0px 18px 36px -18px rgba(12, 5, 46, 0.3), 0px 30px 60px -12px rgba(12, 5, 46, 0.25);
+	border-radius: 50%;
+}
+
+.crop {
+	-webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1));
+}
+
+.mask {
+	position: absolute;
+	/* height: 900px; */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 50%;
+	-webkit-animation: pulseGlow 5s linear infinite alternate;
+	animation: pulseGlow 5s linear infinite alternate;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	background-image: radial-gradient(100% 50% at 100% 50%, rgba(229, 60, 26, 0.25) 0%, rgba(229, 40, 26, 0.248) 11.79%, rgba(229, 53, 26, 0.242) 21.38%, rgba(229, 53, 26, 0.232) 29.12%, rgba(229, 46, 26, 0.22) 35.34%, rgba(229, 53, 26, 0.205) 40.37%, rgba(229, 33, 26, 0.187) 44.56%, rgba(229, 73, 26, 0.168) 48.24%, rgba(229, 33, 26, 0.147) 51.76%, rgba(229, 67, 26, 0.126) 55.44%, rgba(229, 53, 26, 0.104) 59.63%, rgba(229, 73, 26, 0.081) 64.66%, rgba(229, 26, 63, 0.06) 70.88%, rgba(229, 60, 26, 0.038) 78.62%, rgba(229, 26, 26, 0.018)8.21%, rgba(229, 26, 26, 0) 100%);
+}
+
+.mask:after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	display: block;
+	background-image: linear-gradient(180deg, rgba(60, 26, 229, 0) 0%, #e55e1a 50%, rgba(229, 87, 26, 0) 100%);
+}
+
+.text-tech {
+	left: -15%;
+	position: relative;
+	margin-top: 75%;
+}
+
+.text-tech p {
+	margin-top: 20px;
+	line-height: 2;
+	font-size: 18px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+	.text-tech{
+		left: 18%;
+		position: relative;
+		margin-top: 56%;
+		width: 148px;
+	}
+	.text-tech p{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	.model-name {
+		font-size: 8px;
+	}
+	.model-img{
+		width: 22px;
+		height: 22px;
+	}
+  .card{
+	padding: 8px 0px;
+	line-height: 7px;
+  }
+  .card:hover{
+	width: 15%;
+	line-height: 7px;
+	height: 15%;
+  }
+  }
+  
+  @media only screen and (max-width: 400px) {
+	.model-name {
+		font-size: 7px;
+	}
+	
+
+.text-tech {
+	
+    left: 8%;
+    position: relative;
+    margin-top: 22%;
+
+}
+  }

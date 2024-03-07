@@ -1,0 +1,35 @@
+.game-main{
+
+    background:  linear-gradient(135deg, rgb(142 0 0) 0%, rgb(207, 46, 46) 100%);
+    border-bottom-right-radius: 89px;
+    border-top-right-radius:89px ;
+}
+
+#scene{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    perspective:2000px ;
+    width: 100vw;
+    height:700px ;
+    margin-top:80px ;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+@media (min-width: 400px) and (max-width: 900px) {
+
+    #scene{
+        height: 272px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 400px) {
+
+    #scene{
+        height: 272px;
+        /* margin-bottom: 30px; */
+    }
+  }

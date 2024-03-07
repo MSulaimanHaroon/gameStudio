@@ -1,0 +1,40 @@
+.glasscard {
+    background: rgba(252, 186, 186, 0.242);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid #ffffff0d;
+    color: white;
+    padding: 2em;
+    margin: 20px;
+    width: 100%;
+    line-height: 2;
+    max-width: 35rem;
+    
+    border-bottom: 3px solid #ff0000;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.glasscard:hover{
+    border-bottom: 3px solid #ffb700;
+}
+
+@media only screen and (max-width: 900px) {
+    .glasscard {
+        margin: 10px;
+        padding: 10px;
+        max-width: 23rem;
+    }
+
+  
+  }
+  
+  @media only screen and (max-width: 200px) {
+    .glasscard {
+        margin: 10px;
+        padding: 10px;
+        max-width: 23rem;
+  
+    }
+  
+  }
