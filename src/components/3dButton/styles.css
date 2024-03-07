@@ -1,7 +1,7 @@
 button {
-  --purple: #db1507;
-  --pink: #f27c05;
-  --blue: #fb6161;
+  --purple: #df0f00;
+  --pink: #d86d02;
+  --blue: #fe4c4c;
 
   appearance: none;
   border: none;
@@ -34,7 +34,7 @@ button {
   background: linear-gradient(
     60deg,
     var(--blue) 0%,
-    #f6cbcb 30%,
+    #f37070 30%,
     var(--pink) 70%
   );
 }
@@ -61,6 +61,7 @@ button {
   position: absolute;
   top: -100px;
   bottom: -100px;
+  z-index: 100;
   left: -100px;
   right: -100px;
   width: calc(100% + 200px);
@@ -71,6 +72,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1000;
 }
 
 .label {
@@ -87,7 +89,7 @@ button {
 
 .number {
   padding: 20px 0;
-  width: 88px;
+  width: 100px;
   position: relative;
   transform: translateZ(0);
 }
@@ -98,7 +100,7 @@ button {
   left: 0;
   top: 1px;
   bottom: 1px;
-  width: 1px;
+  width: 10px;
   background-color: #35373f;
 }
 

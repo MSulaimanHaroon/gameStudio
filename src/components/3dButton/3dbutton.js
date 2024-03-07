@@ -41,8 +41,8 @@ export default function Button3D() {
         onTap={() => setIsPress(false)}
         onTapCancel={() => setIsPress(false)}
         onPointerMove={(e) => {
-          mouseX.set(e.clientX - bounds.x - bounds.width / 2);
-          mouseY.set(e.clientY - bounds.y - bounds.height / 2);
+          mouseX.set(e.clientX - bounds.x - bounds.width / 3);
+          mouseY.set(e.clientY - bounds.y - bounds.height / 3);
         }}
       >
         <motion.div

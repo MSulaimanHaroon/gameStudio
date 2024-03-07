@@ -20,11 +20,11 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }) {
           <Lights />
         </motion.group>
         <motion.group
-          initial={false}
+          initial={true}
           animate={isHover ? "hover" : "rest"}
           dispose={null}
           variants={{
-            hover: { z: isPress ? -0.9 : 0 }
+            hover: { z: isPress ? 1 : 0 }
           }}
         >
           <Sphere />
@@ -122,7 +122,6 @@ export function Material() {
   return <meshPhongMaterial color="#fff" specular="#fb6161" shininess={10} />;
 }
 
-// Adapted from https://github.com/pmndrs/drei/blob/master/src/core/PerspectiveCamera.tsx
 function Camera({ mouseX, mouseY, ...props }) {
   const cameraX = useSmoothTransform(mouseX, spring, (x) => x / 350);
   const cameraY = useSmoothTransform(mouseY, spring, (y) => (-1 * y) / 350);
