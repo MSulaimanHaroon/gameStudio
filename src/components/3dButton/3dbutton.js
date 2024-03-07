@@ -20,14 +20,13 @@ export default function Button3D() {
   return (
     <MotionConfig transition={transition}>
       <motion.button
-        // onClick={window.location.href('https://www.thegamestormstudios.com/contact/')}
         ref={ref}
         initial={false}
         animate={isHover ? "hover" : "rest"}
         whileTap="press"
         variants={{
           rest: { scale: 1 },
-          hover: { scale: 1.5 },
+          hover: { scale: 1.2 },
           press: { scale: 1.4 }
         }}
         onHoverStart={() => {
@@ -70,7 +69,7 @@ export default function Button3D() {
           variants={{ hover: { scale: 0.85 }, press: { scale: 1.1 } }}
           className="label"
         >
-         Click Here
+         Contact Us
         </motion.div>
       </motion.button>
     </MotionConfig>
